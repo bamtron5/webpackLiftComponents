@@ -4,8 +4,10 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "tsc && webpack",
-    "dev": "tsc && concurrently 'webpack --watch' 'lite-server'",
+    "sass": "node-sass -r ./client/styles -o ./client/styles",
+    "sass:watch": "node-sass -w -r ./client/styles -o ./client/styles",
+    "build": "npm run sass && tsc && webpack",
+    "dev": "tsc && concurrently \"npm run sass:watch\" \"webpack --watch\" \"lite-server\"",
     "start": "npm run build && lite-server"
   },
   "author": "",
@@ -13,6 +15,7 @@
   "devDependencies": {
     "concurrently": "^3.3.0",
     "lite-server": "^2.2.2",
+    "node-sass": "^4.5.0",
     "webpack": "^2.2.1"
   },
   "dependencies": {
@@ -20,7 +23,9 @@
     "@types/angular-resource": "^1.5.8",
     "@types/angular-ui-router": "^1.1.36",
     "angular": "^1.6.2",
+    "angular-messages": "^1.6.2",
     "angular-resource": "^1.6.2",
-    "angular-ui-router": "^0.4.2"
+    "angular-ui-router": "^0.4.2",
+    "bootstrap-sass": "^3.3.7"
   }
 }
