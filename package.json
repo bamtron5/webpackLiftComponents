@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "build": "tsc && webpack",
-    "dev": "concurrently 'webpack --watch' 'lite-server'",
+    "dev": "tsc && concurrently 'webpack --watch' 'lite-server'",
     "start": "npm run build && lite-server"
   },
   "author": "",
