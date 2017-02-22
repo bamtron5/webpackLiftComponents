@@ -1,11 +1,12 @@
+import * as angular from 'angular';
 const Config = [
   '$locationProvider',
   '$stateProvider',
   '$urlRouterProvider',
   (
-    $locationProvider,
-    $stateProvider,
-    $urlRouterProvider
+    $locationProvider:ng.ILocationProvider,
+    $stateProvider:ng.ui.IStateProvider,
+    $urlRouterProvider:ng.ui.IUrlRouterProvider
   ) => {
   $stateProvider
     .state('main', {

@@ -9,18 +9,16 @@ import HomeComponent from './home/home.module';
 import DeckBuilderComponent from './deckBuilder/deckBuilder.module';
 
 const name = 'app';
-const modules = [
-  name,
+const dependencies = [
+  'ui.router',
+  Core, //YOUR CORE DEPENDENCIES
   HomeComponent,
   LayoutComponent,
   DeckBuilderComponent
 ];
 
-angular.module(name, [
-    'ui.router',
-    Core //YOUR CORE DEPENDENCIES
-  ])
+angular.module(name, dependencies)
   .config(Config)
   .run(Run);
 
-  angular.bootstrap(document.body, modules, { strictDi: true });
+angular.bootstrap(document.body, [name], { strictDi: true });
