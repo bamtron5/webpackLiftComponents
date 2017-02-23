@@ -1,15 +1,18 @@
 <nav class="container">
-  <a ui-sref="home">Home</a>
-  <a ui-sref="deckBuilder">Deck Builder</a>
+  <ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+      <a class="nav-link" ui-sref="home" ui-sref-active="active">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" ui-sref="deckBuilder" ui-sref-active="active">Deck Builder</a>
+    </li>
+  </ul>
 </nav>
 
-<div class="container">
-  <ui-view></ui-view>
-</div>
+<div class="container" ui-view></div>
 
-<footer class="container">
-  <!-- <ul>
-    <li><a ui-sref="home">Home</a></li>
-    <li><a ui-sref="deckBuilder">Deck Builder</a></li>
-  </ul> -->
+<footer>
+  <div class="well">
+    Copyright 2017
+  </div>
 </footer>

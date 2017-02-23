@@ -1,6 +1,7 @@
-const Run = [() => {
-  //use factories to run like this
-  //session.initalize(); 
-}];
+function run() {
 
-export default Run;
+}
+
+run.$inject = [];
+
+export default run;

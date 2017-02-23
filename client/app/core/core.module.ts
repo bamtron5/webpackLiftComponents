@@ -1,13 +1,15 @@
 import * as angular from 'angular';
-import CoreConstants from './core.constants';
-import CoreFilters from './core.filters';
+import coreConstants from './core.constants';
+import coreFilters from './core.filters';
+import authInterceptor from './interceptor.factory';
 import 'angular-resource';
 import 'angular-messages';
 
 export default angular.module('app.core', [
-  CoreConstants,
+  coreConstants,
   'ngResource',
-  CoreFilters,
-  'ngMessages'
+  coreFilters,
+  'ngMessages',
+  authInterceptor
 ])
 .name;

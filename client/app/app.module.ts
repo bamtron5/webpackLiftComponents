@@ -1,7 +1,7 @@
 import * as angular from 'angular';
-import Config from './app.config'
-import Run from './app.run';
-import Core from './core/core.module';
+import config from './app.config'
+import run from './app.run';
+import core from './core/core.module';
 import 'angular-ui-router';
 
 import LayoutComponent from './layout/layout.module';
@@ -11,14 +11,14 @@ import DeckBuilderComponent from './deckBuilder/deckBuilder.module';
 const name = 'app';
 const dependencies = [
   'ui.router',
-  Core, //YOUR CORE DEPENDENCIES
+  core, //YOUR CORE DEPENDENCIES
   HomeComponent,
   LayoutComponent,
   DeckBuilderComponent
 ];
 
 angular.module(name, dependencies)
-  .config(Config)
-  .run(Run);
+  .config(config)
+  .run(run);
 
 angular.bootstrap(document.body, [name], { strictDi: true });
