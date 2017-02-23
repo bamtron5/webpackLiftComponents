@@ -7,14 +7,16 @@ import 'angular-ui-router';
 import LayoutComponent from './layout/layout.module';
 import HomeComponent from './home/home.module';
 import DeckBuilderComponent from './deckBuilder/deckBuilder.module';
+import BrainEatersComponent from './brainEaters/brainEaters.module';
 
 const name = 'app';
 const dependencies = [
   'ui.router',
   core, //YOUR CORE DEPENDENCIES
-  HomeComponent,
+  HomeComponent, 
   LayoutComponent,
-  DeckBuilderComponent
+  DeckBuilderComponent,
+  BrainEatersComponent
 ];
 
 angular.module(name, dependencies)

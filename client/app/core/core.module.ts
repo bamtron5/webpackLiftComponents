@@ -6,10 +6,10 @@ import 'angular-resource';
 import 'angular-messages';
 
 export default angular.module('app.core', [
-  coreConstants,
   'ngResource',
-  coreFilters,
   'ngMessages',
+  coreConstants,
+  coreFilters,
   authInterceptor
 ])
 .name;
