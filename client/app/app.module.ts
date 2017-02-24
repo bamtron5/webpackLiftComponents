@@ -8,15 +8,17 @@ import LayoutComponent from './layout/layout.module';
 import HomeComponent from './home/home.module';
 import DeckBuilderComponent from './deckBuilder/deckBuilder.module';
 import BrainEatersComponent from './brainEaters/brainEaters.module';
+import DogsListComponent from './dogsList/dogsList.module';
 
 const name = 'app';
 const dependencies = [
   'ui.router',
   core, //YOUR CORE DEPENDENCIES
-  HomeComponent, 
+  HomeComponent,
   LayoutComponent,
   DeckBuilderComponent,
-  BrainEatersComponent
+  BrainEatersComponent,
+  DogsListComponent
 ];
 
 angular.module(name, dependencies)

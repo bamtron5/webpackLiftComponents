@@ -4,12 +4,14 @@ import coreFilters from './core.filters';
 import authInterceptor from './interceptor.factory';
 import 'angular-resource';
 import 'angular-messages';
+import DogsService from '../services/dogs.service';
 
 export default angular.module('app.core', [
   'ngResource',
   'ngMessages',
   coreConstants,
   coreFilters,
-  authInterceptor
+  authInterceptor,
+  DogsService
 ])
 .name;
