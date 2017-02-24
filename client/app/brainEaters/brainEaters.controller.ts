@@ -4,16 +4,12 @@ import Wall from './Wall';
 import gameFactory from '../services/game.factory';
 
 class BrainEaters {
-  game;
-  currentLevel:number;
-  walls;
+  game = gameFactory();
+  currentLevel:number = 0;
   constructor(
     private LEVELS,
     private IMAGES
   ) {
-    this.currentLevel = 0;
-    this.walls = this.LEVELS[this.currentLevel].walls;
-    this.game = gameFactory();
     this.startGame();
   }
 
@@ -24,7 +20,7 @@ class BrainEaters {
   }
 
   setLevel(){
-    this.walls.forEach((arg) => {
+    this.LEVELS[this.currentLevel].walls.forEach((arg) => {
       new Wall(...arg);
     });
   }

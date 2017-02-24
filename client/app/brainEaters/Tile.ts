@@ -20,7 +20,7 @@ class Tile implements ITile {
   w:number;
   h:number;
   type:string;
-  game;
+  game = gameFactory().vm.instance;
   constructor(
     ...args
   ) {
@@ -30,7 +30,6 @@ class Tile implements ITile {
       y
     ] = args;
 
-    this.game = gameFactory().vm.instance;
     this.image = new Image();
     this.image.src = image;
     this.image.height = this.unit;
@@ -45,8 +44,7 @@ class Tile implements ITile {
   }
 
   drawTile() {
-    this.game.hashTable.set(JSON.stringify(new Point(this.x, this.y)), this);
-    console.log(this.game.hashTable);
+    this.game.hashTable.set(JSON.stringify(new Point(this.x, this.y)), this.type);
     this.game.context.drawImage(this.image, this.x, this.y, this.w, this.h);
   }
 
