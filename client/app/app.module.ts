@@ -9,6 +9,7 @@ import HomeComponent from './home/home.module';
 import DeckBuilderComponent from './deckBuilder/deckBuilder.module';
 import BrainEatersComponent from './brainEaters/brainEaters.module';
 import DogsListComponent from './dogsList/dogsList.module';
+import D3Component from './d3Demo/d3Demo.module';
 
 const name = 'app';
 const dependencies = [
@@ -18,7 +19,8 @@ const dependencies = [
   LayoutComponent,
   DeckBuilderComponent,
   BrainEatersComponent,
-  DogsListComponent
+  DogsListComponent,
+  D3Component
 ];
 
 angular.module(name, dependencies)

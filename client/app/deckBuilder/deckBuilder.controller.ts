@@ -6,6 +6,7 @@ class DeckBuilderController {
     DECK_BUILDER_CONFIG
   ) {
     this.title = DECK_BUILDER_CONFIG.title;
+    console.log(DECK_BUILDER_CONFIG);
   }
 
   submit() {

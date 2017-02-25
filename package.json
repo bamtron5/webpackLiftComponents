@@ -15,9 +15,11 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.3.0",
+    "css-loader": "^0.26.2",
     "lite-server": "^2.2.2",
     "node-sass": "^4.5.0",
     "open-browser-webpack-plugin": "0.0.4",
+    "style-loader": "^0.13.2",
     "webpack": "^2.2.1",
     "webpack-bundle-analyzer": "^2.3.0"
   },
@@ -27,6 +29,7 @@
     "@types/angular-ui-router": "^1.1.36",
     "angular": "^1.6.2",
     "angular-messages": "^1.6.2",
+    "angular-nvd3": "^1.0.9",
     "angular-resource": "^1.6.2",
     "angular-ui-router": "^0.4.2",
     "animate.css": "^3.5.2",

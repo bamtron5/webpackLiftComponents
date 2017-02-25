@@ -25,5 +25,13 @@ module.exports = {
     // DEV PLUGINS
     analyze ? new BundleAnalyzerPlugin() : function(){},
     analyze ? new OpenBrowserPlugin({url: '127.0.0.1:8888'}) : function(){}
-  ]
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      }
+    ]
+  }
 };
