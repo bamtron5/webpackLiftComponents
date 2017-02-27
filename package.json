@@ -8,8 +8,10 @@
     "sass": "node-sass -r ./client/styles -o ./client/styles",
     "sass:watch": "node-sass -w -r ./client/styles -o ./client/styles",
     "build": "npm run sass && tsc && webpack",
+    "build:prod": "PROD_ENV=1 npm run build",
     "dev": "tsc && concurrently \"npm run sass:watch\" \"webpack --watch\" \"lite-server\"",
-    "start": "npm run build && lite-server"
+    "start": "npm run build && lite-server",
+    "serve": "lite-server"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +21,8 @@
     "lite-server": "^2.2.2",
     "node-sass": "^4.5.0",
     "open-browser-webpack-plugin": "0.0.4",
+    "script-loader": "^0.7.0",
+    "source-map-loader": "^0.1.6",
     "style-loader": "^0.13.2",
     "webpack": "^2.2.1",
     "webpack-bundle-analyzer": "^2.3.0"

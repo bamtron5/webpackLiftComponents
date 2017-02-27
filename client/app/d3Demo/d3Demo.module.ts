@@ -1,6 +1,5 @@
 import * as angular from 'angular';
 
-
 import controller from './d3Demo.controller';
 import route from './d3Demo.route';
 

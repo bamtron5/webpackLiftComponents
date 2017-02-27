@@ -13,16 +13,18 @@ module.exports = {
     path: __dirname + "/client/dist",
     filename: "bundle.js"
   },
-  devtool: '#inline-source-map',
-  plugins: isProd ? [
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false }
+  resolve: {
+    extensions: [".js", ".ts"]
+  },
+  devtool: 'inline-source-map',
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
     }),
-    analyze ? new BundleAnalyzerPlugin() : function(){},
-    analyze ? new OpenBrowserPlugin({url: '127.0.0.1:8888'}) : function(){}
-  ] : [
-    // DEV PLUGINS
+    isProd ? new webpack.optimize.UglifyJsPlugin({
+      compress: { warnings: false }
+    }) : function(){},
     analyze ? new BundleAnalyzerPlugin() : function(){},
     analyze ? new OpenBrowserPlugin({url: '127.0.0.1:8888'}) : function(){}
   ],
@@ -31,6 +33,15 @@ module.exports = {
       {
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader' ]
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: "source-map-loader"
+      },
+      {
+        test: /\.exec.js$/,
+        use: [ 'script-loader' ]
       }
     ]
   }
