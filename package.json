@@ -21,6 +21,7 @@
     "lite-server": "^2.2.2",
     "node-sass": "^4.5.0",
     "open-browser-webpack-plugin": "0.0.4",
+    "sass-loader": "^6.0.2",
     "script-loader": "^0.7.0",
     "source-map-loader": "^0.1.6",
     "style-loader": "^0.13.2",
@@ -39,6 +40,7 @@
     "animate.css": "^3.5.2",
     "bootstrap-sass": "^3.3.7",
     "font-awesome": "^4.7.0",
+    "mo-js": "^0.288.1",
     "toastr": "^2.1.2"
   }
 }

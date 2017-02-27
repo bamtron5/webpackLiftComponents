@@ -7,7 +7,6 @@ export default angular.module('app.brainEaters.constants', [])
   })
   .constant('LEVELS', [
     {
-      log: (() => console.log(this))(),
       walls: [
         ['client/assets/bricks.jpg', 50, 50 * 2],
         ['client/assets/bricks.jpg', 50, 50 * 3],

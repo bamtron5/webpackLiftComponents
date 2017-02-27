@@ -10,6 +10,7 @@ import {DogsServiceModule} from '../services/dogs.service';
 //LIB non injectable
 import '../../../node_modules/nvd3/build/nv.d3';
 import '../../../node_modules/nvd3/build/nv.d3.css';
+import '../../../node_modules/animate.css/animate.css'; 
 
 export default angular.module('app.core', [
   'ngResource',

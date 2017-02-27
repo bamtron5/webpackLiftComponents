@@ -10,6 +10,7 @@ import DeckBuilderComponent from './deckBuilder/deckBuilder.module';
 import BrainEatersComponent from './brainEaters/brainEaters.module';
 import DogsListComponent from './dogsList/dogsList.module';
 import D3Component from './d3Demo/d3Demo.module';
+import MoAnimationComponent from './moAnimation/moAnimation.module';
 
 const name = 'app';
 const dependencies = [
@@ -20,7 +21,8 @@ const dependencies = [
   DeckBuilderComponent,
   BrainEatersComponent,
   DogsListComponent,
-  D3Component
+  D3Component,
+  MoAnimationComponent
 ];
 
 angular.module(name, dependencies)
